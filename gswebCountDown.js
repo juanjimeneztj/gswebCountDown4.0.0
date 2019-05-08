@@ -6,7 +6,8 @@
     CountDown created by Juan Jiménez.
 
     Initially this counter is counter in reverse only days,hours,minutes and seconds.
-    Repository  : https://gitlab.com/juanjimeneztj/gswebcountdown.git
+    Repository  : https://github.com/juanjimeneztj/gswebCountDown4.0.0
+                  git@github.com:juanjimeneztj/gswebCountDown4.0.0.git
     Version     : 4.0.0
 */
 
