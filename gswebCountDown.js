@@ -18,6 +18,8 @@
 
     // Defaults
     var settings = $.extend({
+        'theme'             : 'default',
+        'type'              : 'default',
         'lbldays'           : true,
         'lblhours'          : true,
         'lblminutes'        : true,
@@ -76,35 +78,157 @@
             }
         }else{
             if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                }else{
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }
             }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
-                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                }else{
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                }
             }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+
+               if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                }else{
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                }
             }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+
+               if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                }else{
+                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                } 
             }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+               if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                }else{
+                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }
             }else if($settings.lbldays && $settings.lblhours){
-                $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+'</span>');
+                }else{
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                }
             }else if($settings.lbldays && $settings.lblminutes){
-                $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                }else{
+                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                }
             }else if($settings.lbldays && $settings.lblseconds){
-                $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                }else{
+                    $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                }
             }else if($settings.lblhours && $settings.lblminutes){
-                $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                }else{
+                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                }
             }else if($settings.lblhours && $settings.lblseconds){
-                $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                }else{
+                    $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                }
             }else if($settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                }else{
+                    $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }
             }else if($settings.lbldays){
-                $this.html(gswebCountDownDays);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+'</span>');
+                }else{
+                    $this.html(gswebCountDownDays);
+                }
             }else if($settings.lblhours){
-                $this.html(gswebCountDownHours);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownHours);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownHours+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownHours+'</span>');
+                }else{
+                    $this.html(gswebCountDownHours);
+                }
             }else if($settings.lblminutes){
-                $this.html(gswebCountDownMinutes);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownMinutes);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownMinutes+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownMinutes+'</span>');
+                }else{
+                    $this.html(gswebCountDownMinutes);
+                }
             }else{
-                $this.html(gswebCountDownSeconds);
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownSeconds);
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownSeconds+'</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownSeconds+'</span>');
+                }else{
+                    $this.html(gswebCountDownSeconds);
+                }
             }
         }
 
@@ -172,36 +296,158 @@
                         $this.html(gswebCountDownSeconds+" Seconds");
                     }
                 }else{
-                   if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                       $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                        }else{
+                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        }
                     }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                        }else{
+                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                        }
                     }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+
+                       if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                        }else{
+                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                        }
                     }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+
+                       if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                        }else{
+                            $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        } 
                     }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                       if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                        }else{
+                            $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        }
                     }else if($settings.lbldays && $settings.lblhours){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+'</span>');
+                        }else{
+                            $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                        }
                     }else if($settings.lbldays && $settings.lblminutes){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                        }else{
+                            $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                        }
                     }else if($settings.lbldays && $settings.lblseconds){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                        }else{
+                            $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                        }
                     }else if($settings.lblhours && $settings.lblminutes){
-                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                        }else{
+                            $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                        }
                     }else if($settings.lblhours && $settings.lblseconds){
-                        $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                        }else{
+                            $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                        }
                     }else if($settings.lblminutes && $settings.lblseconds){
-                        $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                        }else{
+                            $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                        }
                     }else if($settings.lbldays){
-                        $this.html(gswebCountDownDays);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownDays);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownDays+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownDays+'</span>');
+                        }else{
+                            $this.html(gswebCountDownDays);
+                        }
                     }else if($settings.lblhours){
-                        $this.html(gswebCountDownHours);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownHours);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownHours+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownHours+'</span>');
+                        }else{
+                            $this.html(gswebCountDownHours);
+                        }
                     }else if($settings.lblminutes){
-                        $this.html(gswebCountDownMinutes);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownMinutes);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownMinutes+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownMinutes+'</span>');
+                        }else{
+                            $this.html(gswebCountDownMinutes);
+                        }
                     }else{
-                        $this.html(gswebCountDownSeconds);
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html(gswebCountDownSeconds);
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>'+gswebCountDownSeconds+'</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>'+gswebCountDownSeconds+'</span>');
+                        }else{
+                            $this.html(gswebCountDownSeconds);
+                        }
                     }
                 }
             },1000);
@@ -262,35 +508,157 @@
                 }
             }else{
                 if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }
                 }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }
                 }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                    
+                   if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }
                 }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    
+                   if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    } 
                 }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                   if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }
                 }else if($settings.lbldays && $settings.lblhours){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                    }
                 }else if($settings.lbldays && $settings.lblminutes){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                    }
                 }else if($settings.lbldays && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                    }
                 }else if($settings.lblhours && $settings.lblminutes){
-                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }
                 }else if($settings.lblhours && $settings.lblseconds){
-                    $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }
                 }else if($settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }
                 }else if($settings.lbldays){
-                    $this.html(gswebCountDownDays);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays);
+                    }
                 }else if($settings.lblhours){
-                    $this.html(gswebCountDownHours);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+'</span>');
+                    }else{
+                        $this.html(gswebCountDownHours);
+                    }
                 }else if($settings.lblminutes){
-                    $this.html(gswebCountDownMinutes);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownMinutes);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownMinutes+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownMinutes+'</span>');
+                    }else{
+                        $this.html(gswebCountDownMinutes);
+                    }
                 }else{
-                    $this.html(gswebCountDownSeconds);
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownSeconds);
+                    }
                 }
             }
 
