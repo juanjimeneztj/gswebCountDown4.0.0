@@ -42,20 +42,64 @@
         if (gswebCountDownSeconds < 10){ gswebCountDownSeconds = "0"+parseInt(gswebCountDownSeconds); } 
         
         if($settings.labels){
-            $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+            if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+            }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+            }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+            }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+            }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+            }else if($settings.lbldays && $settings.lblhours){
+                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+            }else if($settings.lbldays && $settings.lblminutes){
+                $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+            }else if($settings.lbldays && $settings.lblseconds){
+                $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+            }else if($settings.lblhours && $settings.lblminutes){
+                $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+            }else if($settings.lblhours && $settings.lblseconds){
+                $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+            }else if($settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+            }else if($settings.lbldays){
+                $this.html(gswebCountDownDays+" Days");
+            }else if($settings.lblhours){
+                $this.html(gswebCountDownHours+" Hours");
+            }else if($settings.lblminutes){
+                $this.html(gswebCountDownMinutes+" Minutes");
+            }else{
+                $this.html(gswebCountDownSeconds+" Seconds");
+            }
         }else{
             if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
                 $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-            }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-            }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-            }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
             }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
                 $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+            }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+            }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+            }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+            }else if($settings.lbldays && $settings.lblhours){
+                $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+            }else if($settings.lbldays && $settings.lblminutes){
+                $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+            }else if($settings.lbldays && $settings.lblseconds){
+                $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+            }else if($settings.lblhours && $settings.lblminutes){
+                $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+            }else if($settings.lblhours && $settings.lblseconds){
+                $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
             }else if($settings.lblminutes && $settings.lblseconds){
                 $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+            }else if($settings.lbldays){
+                $this.html(gswebCountDownDays);
+            }else if($settings.lblhours){
+                $this.html(gswebCountDownHours);
             }else if($settings.lblminutes){
                 $this.html(gswebCountDownMinutes);
             }else{
@@ -95,22 +139,64 @@
                 if (gswebCountDownSeconds < 10){ gswebCountDownSeconds = "0"+parseInt(gswebCountDownSeconds); } 
 
                 if($settings.labels){
-                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.lbldays && $settings.lblhours){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                    }else if($settings.lbldays && $settings.lblminutes){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                    }else if($settings.lbldays && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.lblhours && $settings.lblminutes){
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    }else if($settings.lblhours && $settings.lblseconds){
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.lbldays){
+                        $this.html(gswebCountDownDays+" Days");
+                    }else if($settings.lblhours){
+                        $this.html(gswebCountDownHours+" Hours");
+                    }else if($settings.lblminutes){
+                        $this.html(gswebCountDownMinutes+" Minutes");
+                    }else{
+                        $this.html(gswebCountDownSeconds+" Seconds");
+                    }
                 }else{
                    if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                    }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                    }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                    }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                       $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
                     }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
                         $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
-                    }else if($settings.lblminutes && $settings.lblseconds){
-                        $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.lbldays && $settings.lblhours){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                    }else if($settings.lbldays && $settings.lblminutes){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                    }else if($settings.lbldays && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
                     }else if($settings.lblhours && $settings.lblminutes){
                         $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }else if($settings.lblhours && $settings.lblseconds){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }else if($settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.lbldays){
+                        $this.html(gswebCountDownDays);
+                    }else if($settings.lblhours){
+                        $this.html(gswebCountDownHours);
                     }else if($settings.lblminutes){
                         $this.html(gswebCountDownMinutes);
                     }else{
@@ -142,22 +228,64 @@
             if (gswebCountDownSeconds < 10) { gswebCountDownSeconds = "0"+parseInt(gswebCountDownSeconds); } 
 
             if($settings.labels){
-                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.lbldays && $settings.lblhours){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                }else if($settings.lbldays && $settings.lblminutes){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                }else if($settings.lbldays && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.lblhours && $settings.lblminutes){
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                }else if($settings.lblhours && $settings.lblseconds){
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.lbldays){
+                    $this.html(gswebCountDownDays+" Days");
+                }else if($settings.lblhours){
+                    $this.html(gswebCountDownHours+" Hours");
+                }else if($settings.lblminutes){
+                    $this.html(gswebCountDownMinutes+" Minutes");
+                }else{
+                    $this.html(gswebCountDownSeconds+" Seconds");
+                }
             }else{
                 if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
                     $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
                 }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
                     $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
-                }else if($settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.lbldays && $settings.lblhours){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                }else if($settings.lbldays && $settings.lblminutes){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                }else if($settings.lbldays && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
                 }else if($settings.lblhours && $settings.lblminutes){
                     $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                }else if($settings.lblhours && $settings.lblseconds){
+                    $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                }else if($settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.lbldays){
+                    $this.html(gswebCountDownDays);
+                }else if($settings.lblhours){
+                    $this.html(gswebCountDownHours);
                 }else if($settings.lblminutes){
                     $this.html(gswebCountDownMinutes);
                 }else{
