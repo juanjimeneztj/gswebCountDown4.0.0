@@ -17,11 +17,16 @@
 
     // Defaults
     var settings = $.extend({
-        'date'      : null,
-        'days'      : 0,
-        'hours'     : 0,
-        'minutes'   : 0,
-        'seconds'   : 0
+        'lbldays'           : true,
+        'lblhours'          : true,
+        'lblminutes'        : true,
+        'lblseconds'        : true,
+        'labels'            : false,
+        'date'              : null,
+        'days'              : 0,
+        'hours'             : 0,
+        'minutes'           : 0,
+        'seconds'           : 0
     }, options);
 
     var $this = $(this),$settings = settings,gswebCountDownDays,gswebCountDownHours,gswebCountDownMinutes, gswebCountDownSeconds, gswebCounter,countDownDate,gswebNow,gswebDistance;
@@ -35,8 +40,29 @@
         if (gswebCountDownHours < 10) { gswebCountDownHours = "0"+parseInt(gswebCountDownHours); } 
         if (gswebCountDownMinutes < 10) { gswebCountDownMinutes = "0"+parseInt(gswebCountDownMinutes); } 
         if (gswebCountDownSeconds < 10){ gswebCountDownSeconds = "0"+parseInt(gswebCountDownSeconds); } 
+        
+        if($settings.labels){
+            $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+        }else{
+            if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+            }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+            }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+            }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+            }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+            }else if($settings.lblminutes && $settings.lblseconds){
+                $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+            }else if($settings.lblminutes){
+                $this.html(gswebCountDownMinutes);
+            }else{
+                $this.html(gswebCountDownSeconds);
+            }
+        }
 
-        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
 
         $(document).ready(function(){
             gswebCounter = setInterval(function(){
@@ -68,7 +94,29 @@
                 if (gswebCountDownMinutes < 10) { gswebCountDownMinutes = "0"+parseInt(gswebCountDownMinutes); } 
                 if (gswebCountDownSeconds < 10){ gswebCountDownSeconds = "0"+parseInt(gswebCountDownSeconds); } 
 
-                $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                if($settings.labels){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else{
+                   if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }else if($settings.lblminutes && $settings.lblseconds){
+                        $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.lblhours && $settings.lblminutes){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }else if($settings.lblminutes){
+                        $this.html(gswebCountDownMinutes);
+                    }else{
+                        $this.html(gswebCountDownSeconds);
+                    }
+                }
             },1000);
 
         });
@@ -93,7 +141,29 @@
             if (gswebCountDownMinutes < 10) { gswebCountDownMinutes = "0"+parseInt(gswebCountDownMinutes); } 
             if (gswebCountDownSeconds < 10) { gswebCountDownSeconds = "0"+parseInt(gswebCountDownSeconds); } 
 
-            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+            if($settings.labels){
+                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+            }else{
+                if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                    $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                }else if($settings.lblminutes && $settings.lblseconds){
+                    $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                }else if($settings.lblhours && $settings.lblminutes){
+                    $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                }else if($settings.lblminutes){
+                    $this.html(gswebCountDownMinutes);
+                }else{
+                    $this.html(gswebCountDownSeconds);
+                }
+            }
 
             if (gswebDistance < 0) {
                 clearInterval(x);
