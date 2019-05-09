@@ -34,6 +34,60 @@
 
     var $this = $(this),$settings = settings,gswebCountDownDays,gswebCountDownHours,gswebCountDownMinutes, gswebCountDownSeconds, gswebCounter,countDownDate,gswebNow,gswebDistance;
       
+    if($settings.theme === 'red'){
+        var gswebColumns = 4;
+        
+        if($settings.lbldays==false){
+            gswebColumns=gswebColumns-1;
+        }
+        if($settings.lblhours==false){
+            gswebColumns=gswebColumns-1;
+        }
+        if($settings.lblminutes==false){
+            gswebColumns=gswebColumns-1;
+        }
+        if($settings.lblseconds==false){
+            gswebColumns=gswebColumns-1;
+        }
+        switch(gswebColumns) {
+            case 1:
+                var css="div[gsweb-theme=red] { background: #fff; display: grid; grid-template-columns: auto; max-width: 300px; margin: 0 auto;width: 100% } div[gsweb-theme=red] > div { font-family: 'Roboto', sans-serif!important; font-weight: 300!important; display: grid; padding: 3px; text-align: center } div[gsweb-theme=red] > div:nth-of-type(2),div[gsweb-theme=red] > div:nth-of-type(5),div[gsweb-theme=red] > div:nth-of-type(8),div[gsweb-theme=red] > div:nth-of-type(11) { font-size: 16px!important; line-height: 16px!important; text-transform: uppercase } div[gsweb-theme=red] > div:nth-of-type(1),div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-top: 1px solid #fa0000; border-bottom: 1px solid #fa0000; font-size: 34px!important; line-height: 36px!important; padding: 10px 5px!important } div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-left: none; border-right: none } div[gsweb-theme=red] > div:nth-of-type(10) { border-right: 1px solid #fa0000 } div[gsweb-theme=red] > div:nth-of-type(1) { background: #fa0000; color: #fff } /* Days number */div[gsweb-theme=red] > div:nth-of-type(1) { order: 1 } /* Days label */div[gsweb-theme=red] > div:nth-of-type(2) { order: 5 } /* : */ div[gsweb-theme=red] > div:nth-of-type(3) { order: 9; display: none } /* hours number */ div[gsweb-theme=red] > div:nth-of-type(4) { order: 2 } /* Hours label */ div[gsweb-theme=red] > div:nth-of-type(5) { order: 6 } /* : */ div[gsweb-theme=red] > div:nth-of-type(6) { order: 10; display: none } /* Minutes number */div[gsweb-theme=red] > div:nth-of-type(7) { order: 3 } /* Minutes label */div[gsweb-theme=red] > div:nth-of-type(8) { order: 7 } /* : */ div[gsweb-theme=red] > div:nth-of-type(9) { order: 11; display: none }/* Seconds number */div[gsweb-theme=red] > div:nth-of-type(10) { order: 4 } /*seconds label*/div[gsweb-theme=red] > div:nth-of-type(11) { order: 8 } ";
+                break;
+            case 2:
+                var css="div[gsweb-theme=red] { background: #fff; display: grid; grid-template-columns: auto auto; max-width: 300px; margin: 0 auto;width: 100% } div[gsweb-theme=red] > div { font-family: 'Roboto', sans-serif!important; font-weight: 300!important; display: grid; padding: 3px; text-align: center } div[gsweb-theme=red] > div:nth-of-type(2),div[gsweb-theme=red] > div:nth-of-type(5),div[gsweb-theme=red] > div:nth-of-type(8),div[gsweb-theme=red] > div:nth-of-type(11) { font-size: 16px!important; line-height: 16px!important; text-transform: uppercase } div[gsweb-theme=red] > div:nth-of-type(1),div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-top: 1px solid #fa0000; border-bottom: 1px solid #fa0000; font-size: 34px!important; line-height: 36px!important; padding: 10px 5px!important } div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-left: none; border-right: none } div[gsweb-theme=red] > div:nth-of-type(4) { border-right: 1px solid #fa0000 } div[gsweb-theme=red] > div:nth-of-type(1) { background: #fa0000; color: #fff } /* Days number */div[gsweb-theme=red] > div:nth-of-type(1) { order: 1 } /* Days label */div[gsweb-theme=red] > div:nth-of-type(2) { order: 5 } /* : */ div[gsweb-theme=red] > div:nth-of-type(3) { order: 9; display: none } /* hours number */ div[gsweb-theme=red] > div:nth-of-type(4) { order: 2 } /* Hours label */ div[gsweb-theme=red] > div:nth-of-type(5) { order: 6 } /* : */ div[gsweb-theme=red] > div:nth-of-type(6) { order: 10; display: none } /* Minutes number */div[gsweb-theme=red] > div:nth-of-type(7) { order: 3 } /* Minutes label */div[gsweb-theme=red] > div:nth-of-type(8) { order: 7 } /* : */ div[gsweb-theme=red] > div:nth-of-type(9) { order: 11; display: none }/* Seconds number */div[gsweb-theme=red] > div:nth-of-type(10) { order: 4 } /*seconds label*/div[gsweb-theme=red] > div:nth-of-type(11) { order: 8 } ";
+                break;
+            case 3:
+                var css="div[gsweb-theme=red] { background: #fff; display: grid; grid-template-columns: auto auto auto; max-width: 300px; margin: 0 auto;width: 100% } div[gsweb-theme=red] > div { font-family: 'Roboto', sans-serif!important; font-weight: 300!important; display: grid; padding: 3px; text-align: center } div[gsweb-theme=red] > div:nth-of-type(2),div[gsweb-theme=red] > div:nth-of-type(5),div[gsweb-theme=red] > div:nth-of-type(8),div[gsweb-theme=red] > div:nth-of-type(11) { font-size: 16px!important; line-height: 16px!important; text-transform: uppercase } div[gsweb-theme=red] > div:nth-of-type(1),div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-top: 1px solid #fa0000; border-bottom: 1px solid #fa0000; font-size: 34px!important; line-height: 36px!important; padding: 10px 5px!important } div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-left: none; border-right: none } div[gsweb-theme=red] > div:nth-of-type(7) { border-right: 1px solid #fa0000 } div[gsweb-theme=red] > div:nth-of-type(1) { background: #fa0000; color: #fff } /* Days number */div[gsweb-theme=red] > div:nth-of-type(1) { order: 1 } /* Days label */div[gsweb-theme=red] > div:nth-of-type(2) { order: 5 } /* : */ div[gsweb-theme=red] > div:nth-of-type(3) { order: 9; display: none } /* hours number */ div[gsweb-theme=red] > div:nth-of-type(4) { order: 2 } /* Hours label */ div[gsweb-theme=red] > div:nth-of-type(5) { order: 6 } /* : */ div[gsweb-theme=red] > div:nth-of-type(6) { order: 10; display: none } /* Minutes number */div[gsweb-theme=red] > div:nth-of-type(7) { order: 3 } /* Minutes label */div[gsweb-theme=red] > div:nth-of-type(8) { order: 7 } /* : */ div[gsweb-theme=red] > div:nth-of-type(9) { order: 11; display: none }/* Seconds number */div[gsweb-theme=red] > div:nth-of-type(10) { order: 4 } /*seconds label*/div[gsweb-theme=red] > div:nth-of-type(11) { order: 8 } ";
+                break;
+            case 4:
+                var css="div[gsweb-theme=red] { background: #fff; display: grid; grid-template-columns: auto auto auto auto; max-width: 300px; margin: 0 auto;width: 100% } div[gsweb-theme=red] > div { font-family: 'Roboto', sans-serif!important; font-weight: 300!important; display: grid; padding: 3px; text-align: center } div[gsweb-theme=red] > div:nth-of-type(2),div[gsweb-theme=red] > div:nth-of-type(5),div[gsweb-theme=red] > div:nth-of-type(8),div[gsweb-theme=red] > div:nth-of-type(11) { font-size: 16px!important; line-height: 16px!important; text-transform: uppercase } div[gsweb-theme=red] > div:nth-of-type(1),div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-top: 1px solid #fa0000; border-bottom: 1px solid #fa0000; font-size: 34px!important; line-height: 36px!important; padding: 10px 5px!important } div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-left: none; border-right: none } div[gsweb-theme=red] > div:nth-of-type(10) { border-right: 1px solid #fa0000 } div[gsweb-theme=red] > div:nth-of-type(1) { background: #fa0000; color: #fff } /* Days number */div[gsweb-theme=red] > div:nth-of-type(1) { order: 1 } /* Days label */div[gsweb-theme=red] > div:nth-of-type(2) { order: 5 } /* : */ div[gsweb-theme=red] > div:nth-of-type(3) { order: 9; display: none } /* hours number */ div[gsweb-theme=red] > div:nth-of-type(4) { order: 2 } /* Hours label */ div[gsweb-theme=red] > div:nth-of-type(5) { order: 6 } /* : */ div[gsweb-theme=red] > div:nth-of-type(6) { order: 10; display: none } /* Minutes number */div[gsweb-theme=red] > div:nth-of-type(7) { order: 3 } /* Minutes label */div[gsweb-theme=red] > div:nth-of-type(8) { order: 7 } /* : */ div[gsweb-theme=red] > div:nth-of-type(9) { order: 11; display: none }/* Seconds number */div[gsweb-theme=red] > div:nth-of-type(10) { order: 4 } /*seconds label*/div[gsweb-theme=red] > div:nth-of-type(11) { order: 8 } ";
+                break;
+            default:
+                var css="div[gsweb-theme=red] { background: #fff; display: grid; grid-template-columns: auto auto auto auto; max-width: 300px; margin: 0 auto;width: 100% } div[gsweb-theme=red] > div { font-family: 'Roboto', sans-serif!important; font-weight: 300!important; display: grid; padding: 3px; text-align: center } div[gsweb-theme=red] > div:nth-of-type(2),div[gsweb-theme=red] > div:nth-of-type(5),div[gsweb-theme=red] > div:nth-of-type(8),div[gsweb-theme=red] > div:nth-of-type(11) { font-size: 16px!important; line-height: 16px!important; text-transform: uppercase } div[gsweb-theme=red] > div:nth-of-type(1),div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-top: 1px solid #fa0000; border-bottom: 1px solid #fa0000; font-size: 34px!important; line-height: 36px!important; padding: 10px 5px!important } div[gsweb-theme=red] > div:nth-of-type(4),div[gsweb-theme=red] > div:nth-of-type(7),div[gsweb-theme=red] > div:nth-of-type(10) { border-left: none; border-right: none } div[gsweb-theme=red] > div:nth-of-type(10) { border-right: 1px solid #fa0000 } div[gsweb-theme=red] > div:nth-of-type(1) { background: #fa0000; color: #fff } /* Days number */div[gsweb-theme=red] > div:nth-of-type(1) { order: 1 } /* Days label */div[gsweb-theme=red] > div:nth-of-type(2) { order: 5 } /* : */ div[gsweb-theme=red] > div:nth-of-type(3) { order: 9; display: none } /* hours number */ div[gsweb-theme=red] > div:nth-of-type(4) { order: 2 } /* Hours label */ div[gsweb-theme=red] > div:nth-of-type(5) { order: 6 } /* : */ div[gsweb-theme=red] > div:nth-of-type(6) { order: 10; display: none } /* Minutes number */div[gsweb-theme=red] > div:nth-of-type(7) { order: 3 } /* Minutes label */div[gsweb-theme=red] > div:nth-of-type(8) { order: 7 } /* : */ div[gsweb-theme=red] > div:nth-of-type(9) { order: 11; display: none }/* Seconds number */div[gsweb-theme=red] > div:nth-of-type(10) { order: 4 } /*seconds label*/div[gsweb-theme=red] > div:nth-of-type(11) { order: 8 } ";
+                break;
+        }
+        
+        var head = document.head || document.getElementsByTagName('head')[0],style = document.createElement('style');
+    
+        var font = document.createElement('link');
+            font.rel = 'stylesheet';
+            font.href = "https://fonts.googleapis.com/css?family=Oswald:300,400";
+
+        style.type = 'text/css';
+        if (style.styleSheet){
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        head.appendChild(style);
+        head.appendChild(font);
+        
+        $this.attr('gsweb-theme','red');
+        $settings.theme='default';
+        $settings.labels=true;
+        $settings.type='div';
+    }
+      
     if($settings.date === null){
         if($settings.days){gswebCountDownDays = $settings.days;}else{gswebCountDownDays = 0;} 
         if($settings.hours){gswebCountDownHours = $settings.hours;}else{gswebCountDownHours = 0;} 
