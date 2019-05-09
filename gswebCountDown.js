@@ -46,35 +46,155 @@
         
         if($settings.labels){
             if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                }else{
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }
             }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
-                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                }else{
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                }
             }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                }else{
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                }
             }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                }else{
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }
             }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                }else{
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }
             }else if($settings.lbldays && $settings.lblhours){
-                $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div>");
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span>");
+                }else{
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                }
             }else if($settings.lbldays && $settings.lblminutes){
-                $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                }else{
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                }
             }else if($settings.lbldays && $settings.lblseconds){
-                $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                }else{
+                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                }
             }else if($settings.lblhours && $settings.lblminutes){
-                $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                }else{
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                }
             }else if($settings.lblhours && $settings.lblseconds){
-                $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                }else{
+                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                }
             }else if($settings.lblminutes && $settings.lblseconds){
-                $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                }else{
+                    $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                }
             }else if($settings.lbldays){
-                $this.html(gswebCountDownDays+" Days");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownDays+" Days");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div>");
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span>");
+                }else{
+                    $this.html(gswebCountDownDays+" Days");
+                }
             }else if($settings.lblhours){
-                $this.html(gswebCountDownHours+" Hours");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownHours+" Hours");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div>");
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span>");
+                }else{
+                    $this.html(gswebCountDownHours+" Hours");
+                }
             }else if($settings.lblminutes){
-                $this.html(gswebCountDownMinutes+" Minutes");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownMinutes+" Minutes");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                }else{
+                    $this.html(gswebCountDownMinutes+" Minutes");
+                }
             }else{
-                $this.html(gswebCountDownSeconds+" Seconds");
+                if($settings.theme === 'default' && $settings.type === 'default'){
+                    $this.html(gswebCountDownSeconds+" Seconds");
+                }else if($settings.theme === 'default' && $settings.type === 'div'){
+                    $this.html('<div>'+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                }else if($settings.theme === 'default' && $settings.type === 'span'){
+                    $this.html('<span>'+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                }else{
+                    $this.html(gswebCountDownSeconds+" Seconds");
+                }
             }
         }else{
             if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
@@ -264,192 +384,312 @@
                 if (gswebCountDownSeconds < 10){ gswebCountDownSeconds = "0"+parseInt(gswebCountDownSeconds); } 
 
                 if($settings.labels){
-                    if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
-                    }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
-                    }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    }
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
-                    }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    }
+                }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
-                    }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }
+                }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
-                    }else if($settings.lbldays && $settings.lblhours){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }
+                }else if($settings.lbldays && $settings.lblhours){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
-                    }else if($settings.lbldays && $settings.lblminutes){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span>");
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                    }
+                }else if($settings.lbldays && $settings.lblminutes){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
-                    }else if($settings.lbldays && $settings.lblseconds){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                    }
+                }else if($settings.lbldays && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
-                    }else if($settings.lblhours && $settings.lblminutes){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                    }
+                }else if($settings.lblhours && $settings.lblminutes){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
-                    }else if($settings.lblhours && $settings.lblseconds){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                    }else{
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    }
+                }else if($settings.lblhours && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
-                    }else if($settings.lblminutes && $settings.lblseconds){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    }
+                }else if($settings.lblminutes && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
-                    }else if($settings.lbldays){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }
+                }else if($settings.lbldays){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownDays+" Days");
-                    }else if($settings.lblhours){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span>");
+                    }else{
+                        $this.html(gswebCountDownDays+" Days");
+                    }
+                }else if($settings.lblhours){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownHours+" Hours");
-                    }else if($settings.lblminutes){
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span>");
+                    }else{
+                        $this.html(gswebCountDownHours+" Hours");
+                    }
+                }else if($settings.lblminutes){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
                         $this.html(gswebCountDownMinutes+" Minutes");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                    }else{
+                        $this.html(gswebCountDownMinutes+" Minutes");
+                    }
+                }else{
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownSeconds+'</span><span>Seconds</span>');
                     }else{
                         $this.html(gswebCountDownSeconds+" Seconds");
                     }
-                }else{
-                    if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
-                        }else{
-                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                        }
-                    }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
-                        }else{
-                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
-                        }
-                    }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-
-                       if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
-                        }else{
-                            $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
-                        }
-                    }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-
-                       if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
-                        }else{
-                            $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                        } 
-                    }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                       if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
-                        }else{
-                            $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                        }
-                    }else if($settings.lbldays && $settings.lblhours){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownDays+":"+gswebCountDownHours);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+'</span>');
-                        }else{
-                            $this.html(gswebCountDownDays+":"+gswebCountDownHours);
-                        }
-                    }else if($settings.lbldays && $settings.lblminutes){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
-                        }else{
-                            $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
-                        }
-                    }else if($settings.lbldays && $settings.lblseconds){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
-                        }else{
-                            $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
-                        }
-                    }else if($settings.lblhours && $settings.lblminutes){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
-                        }else{
-                            $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
-                        }
-                    }else if($settings.lblhours && $settings.lblseconds){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
-                        }else{
-                            $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
-                        }
-                    }else if($settings.lblminutes && $settings.lblseconds){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
-                        }else{
-                            $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
-                        }
-                    }else if($settings.lbldays){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownDays);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownDays+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownDays+'</span>');
-                        }else{
-                            $this.html(gswebCountDownDays);
-                        }
-                    }else if($settings.lblhours){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownHours);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownHours+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownHours+'</span>');
-                        }else{
-                            $this.html(gswebCountDownHours);
-                        }
-                    }else if($settings.lblminutes){
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownMinutes);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownMinutes+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownMinutes+'</span>');
-                        }else{
-                            $this.html(gswebCountDownMinutes);
-                        }
+                }
+            }else{
+                if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
                     }else{
-                        if($settings.theme === 'default' && $settings.type === 'default'){
-                            $this.html(gswebCountDownSeconds);
-                        }else if($settings.theme === 'default' && $settings.type === 'div'){
-                            $this.html('<div>'+gswebCountDownSeconds+'</div>');
-                        }else if($settings.theme === 'default' && $settings.type === 'span'){
-                            $this.html('<span>'+gswebCountDownSeconds+'</span>');
-                        }else{
-                            $this.html(gswebCountDownSeconds);
-                        }
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }
+                }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                    
+                   if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }
+                }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                    
+                   if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    } 
+                }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                   if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }
+                }else if($settings.lbldays && $settings.lblhours){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownHours+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownHours+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownHours);
+                    }
+                }else if($settings.lbldays && $settings.lblminutes){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownMinutes);
+                    }
+                }else if($settings.lbldays && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+":"+gswebCountDownSeconds);
+                    }
+                }else if($settings.lblhours && $settings.lblminutes){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownMinutes+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownMinutes+'</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+":"+gswebCountDownMinutes);
+                    }
+                }else if($settings.lblhours && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+":"+gswebCountDownSeconds);
+                    }
+                }else if($settings.lblminutes && $settings.lblseconds){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownMinutes+"</div><div>:</div><div>"+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownMinutes+"</span><span>:</span><span>"+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownMinutes+":"+gswebCountDownSeconds);
+                    }
+                }else if($settings.lbldays){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+'</span>');
+                    }else{
+                        $this.html(gswebCountDownDays);
+                    }
+                }else if($settings.lblhours){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+'</span>');
+                    }else{
+                        $this.html(gswebCountDownHours);
+                    }
+                }else if($settings.lblminutes){
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownMinutes);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownMinutes+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownMinutes+'</span>');
+                    }else{
+                        $this.html(gswebCountDownMinutes);
+                    }
+                }else{
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownSeconds);
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownSeconds+'</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownSeconds+'</span>');
+                    }else{
+                        $this.html(gswebCountDownSeconds);
                     }
                 }
+            }
             },1000);
 
         });
@@ -476,35 +716,155 @@
 
             if($settings.labels){
                 if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }
                 }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
-                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    }
                 }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    }
                 }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }
                 }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }
                 }else if($settings.lbldays && $settings.lblhours){
-                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownHours+"</div><div>Hours</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownHours+"</span><span>Hours</span>");
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownHours+" Hours");
+                    }
                 }else if($settings.lbldays && $settings.lblminutes){
-                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownMinutes+" Minutes");
+                    }
                 }else if($settings.lbldays && $settings.lblseconds){
-                    $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownDays+" Days : "+gswebCountDownSeconds+" Seconds");
+                    }
                 }else if($settings.lblhours && $settings.lblminutes){
-                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                    }else{
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownMinutes+" Minutes");
+                    }
                 }else if($settings.lblhours && $settings.lblseconds){
-                    $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownHours+" Hours : "+gswebCountDownSeconds+" Seconds");
+                    }
                 }else if($settings.lblminutes && $settings.lblseconds){
-                    $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownMinutes+"</div><div>Minutes</div><div>:</div><div>"+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownMinutes+"</span><span>Minutes</span><span>:</span><span>"+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownMinutes+" Minutes : "+gswebCountDownSeconds+" Seconds");
+                    }
                 }else if($settings.lbldays){
-                    $this.html(gswebCountDownDays+" Days");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownDays+" Days");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownDays+"</div><div>Days</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownDays+"</span><span>Days</span>");
+                    }else{
+                        $this.html(gswebCountDownDays+" Days");
+                    }
                 }else if($settings.lblhours){
-                    $this.html(gswebCountDownHours+" Hours");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownHours+" Hours");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownHours+"</div><div>Hours</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownHours+"</span><span>Hours</span>");
+                    }else{
+                        $this.html(gswebCountDownHours+" Hours");
+                    }
                 }else if($settings.lblminutes){
-                    $this.html(gswebCountDownMinutes+" Minutes");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownMinutes+" Minutes");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownMinutes+"</div><div>Minutes</div>");
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownMinutes+"</span><span>Minutes</span>");
+                    }else{
+                        $this.html(gswebCountDownMinutes+" Minutes");
+                    }
                 }else{
-                    $this.html(gswebCountDownSeconds+" Seconds");
+                    if($settings.theme === 'default' && $settings.type === 'default'){
+                        $this.html(gswebCountDownSeconds+" Seconds");
+                    }else if($settings.theme === 'default' && $settings.type === 'div'){
+                        $this.html('<div>'+gswebCountDownSeconds+'</div><div>Seconds</div>');
+                    }else if($settings.theme === 'default' && $settings.type === 'span'){
+                        $this.html('<span>'+gswebCountDownSeconds+'</span><span>Seconds</span>');
+                    }else{
+                        $this.html(gswebCountDownSeconds+" Seconds");
+                    }
                 }
             }else{
                 if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
