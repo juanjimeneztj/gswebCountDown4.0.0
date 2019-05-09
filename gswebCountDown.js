@@ -1024,7 +1024,311 @@
 
             if (gswebDistance < 0) {
                 clearInterval(x);
-                $this.html("00:00:00:00");
+                if($settings.labels){
+                    if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Days : 00 Hours : 00 Minutes : 00 Seconds");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Days</div><div>:</div><div>00</div><div>Hours</div><div>:</div><div>00</div><div>Minutes</div><div>:</div><div>00</div><div>Seconds</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Days</span><span>:</span><span>00</span><span>Hours</span><span>:</span><span>00</span><span>Minutes</span><span>:</span><span>00</span><span>Seconds</span>');
+                        }else{
+                            $this.html("00 Days : 00 Hours : 00 Minutes : 00 Seconds");
+                        }
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Days : 00 Hours : 00 Minutes");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Days</div><div>:</div><div>00</div><div>Hours</div><div>:</div><div>00</div><div>Minutes</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Days</span><span>:</span><span>00</span><span>Hours</span><span>:</span><span>00</span><span>Minutes</span>');
+                        }else{
+                            $this.html("00 Days : 00 Hours : 00 Minutes");
+                        }
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Days : 00 Hours : 00 Seconds");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Days</div><div>:</div><div>00</div><div>Hours</div><div>:</div><div>00</div><div>Seconds</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Days</span><span>:</span><span>00</span><span>Hours</span><span>:</span><span>00</span><span>Seconds</span>');
+                        }else{
+                            $this.html("00 Days : 00 Hours : 00 Seconds");
+                        }
+                    }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Days : 00 Minutes : 00 Seconds");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Days</div><div>:</div><div>00</div><div>Minutes</div><div>:</div><div>00</div><div>Seconds</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Days</span><span>:</span><span>00</span><span>Minutes</span><span>:</span><span>00</span><span>Seconds</span>');
+                        }else{
+                            $this.html("00 Days : 00 Minutes : 00 Seconds");
+                        }
+                    }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Hours : 00 Minutes : 00 Seconds");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Hours</div><div>:</div><div>00</div><div>Minutes</div><div>:</div><div>00</div><div>Seconds</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Hours</span><span>:</span><span>00</span><span>Minutes</span><span>:</span><span>00</span><span>Seconds</span>');
+                        }else{
+                            $this.html("00 Hours : 00 Minutes : 00 Seconds");
+                        }
+                    }else if($settings.lbldays && $settings.lblhours){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Days : 00 Hours");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Days</div><div>:</div><div>00</div><div>Hours</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Days</span><span>:</span><span>00</span><span>Hours</span>');
+                        }else{
+                            $this.html("00 Days : 00 Hours");
+                        }
+                    }else if($settings.lbldays && $settings.lblminutes){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Days : 00 Minutes");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Days</div><div>:</div><div>00</div><div>Minutes</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Days</span><span>:</span><span>00</span><span>Minutes</span>');
+                        }else{
+                            $this.html("00 Days : 00 Minutes");
+                        }
+                    }else if($settings.lbldays && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Days : 00 Seconds");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Days</div><div>:</div><div>00</div><div>Seconds</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Days</span><span>:</span><span>00</span><span>Seconds</span>');
+                        }else{
+                            $this.html("00 Days : 00 Seconds");
+                        }
+                    }else if($settings.lblhours && $settings.lblminutes){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Hours : 00 Minutes");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Hours</div><div>:</div><div>00</div><div>Minutes</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Hours</span><span>:</span><span>00</span><span>Minutes</span>');
+                        }else{
+                            $this.html("00 Hours : 00 Minutes");
+                        }
+                    }else if($settings.lblhours && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Hours : 00 Seconds");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Hours</div><div>:</div><div>00</div><div>Seconds</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Hours</span><span>:</span><span>00</span><span>Seconds</span>');
+                        }else{
+                            $this.html("00 Hours : 00 Seconds");
+                        }
+                    }else if($settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Minutes : 00 Seconds");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Minutes</div><div>:</div><div>00</div><div>Seconds</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Minutes</span><span>:</span><span>00</span><span>Seconds</span>');
+                        }else{
+                            $this.html("00 Minutes : 00 Seconds");
+                        }
+                    }else if($settings.lbldays){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Days");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Days</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Days</span>');
+                        }else{
+                            $this.html("00 Days");
+                        }
+                    }else if($settings.lblhours){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Hours");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Hours</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Hours</span>');
+                        }else{
+                            $this.html("00 Hours");
+                        }
+                    }else if($settings.lblminutes){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Minutes");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Minutes</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Minutes</span>');
+                        }else{
+                            $this.html("00 Minutes");
+                        }
+                    }else{
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00 Seconds");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>Seconds</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>Seconds</span>');
+                        }else{
+                            $this.html("00 Seconds");
+                        }
+                    }
+                }else{
+                    if($settings.lbldays && $settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00:00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div><div>:</div><div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span><span>:</span><span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00:00:00");
+                        }
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblminutes){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00:00");
+                        }
+                    }else if($settings.lbldays && $settings.lblhours && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00:00");
+                        }
+                    }else if($settings.lbldays && $settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00:00");
+                        }
+                    }else if($settings.lblhours && $settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00:00");
+                        }
+                    }else if($settings.lbldays && $settings.lblhours){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00");
+                        }
+                    }else if($settings.lbldays && $settings.lblminutes){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00");
+                        }
+                    }else if($settings.lbldays && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00");
+                        }
+                    }else if($settings.lblhours && $settings.lblminutes){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00");
+                        }
+                    }else if($settings.lblhours && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00");
+                        }
+                    }else if($settings.lblminutes && $settings.lblseconds){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00:00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div><div>:</div><div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span><span>:</span><span>00</span>');
+                        }else{
+                            $this.html("00:00");
+                        }
+                    }else if($settings.lbldays){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span>');
+                        }else{
+                            $this.html("00");
+                        }
+                    }else if($settings.lblhours){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span>');
+                        }else{
+                            $this.html("00");
+                        }
+                    }else if($settings.lblminutes){
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span>');
+                        }else{
+                            $this.html("00");
+                        }
+                    }else{
+                        if($settings.theme === 'default' && $settings.type === 'default'){
+                            $this.html("00");
+                        }else if($settings.theme === 'default' && $settings.type === 'div'){
+                            $this.html('<div>00</div>');
+                        }else if($settings.theme === 'default' && $settings.type === 'span'){
+                            $this.html('<span>00</span>');
+                        }else{
+                            $this.html("00");
+                        }
+                    }
+                }
             }
         }, 1000);
     }
