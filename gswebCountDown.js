@@ -71,7 +71,7 @@
     
         var font = document.createElement('link');
             font.rel = 'stylesheet';
-            font.href = "https://fonts.googleapis.com/css?family=Oswald:300,400";
+            font.href = "https://fonts.googleapis.com/css?family=Roboto:300";
 
         style.type = 'text/css';
         if (style.styleSheet){
