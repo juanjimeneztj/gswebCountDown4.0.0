@@ -17,6 +17,11 @@ Initialize the div wherever you need the counter with the following lines:
 ```
 
 ### Script required
+The following lines of code are required to run this plugin:
+
+```javascript
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+```
 ```javascript
 <script src="../path/gswebCountDown.min.js"></script>
 ```
