@@ -1,0 +1,16 @@
+{
+    "name": "juanjimeneztj/countdown",
+    "description": "CountDown version 4.0.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juan Jimenez",
+            "email": "juanjimeneztj@gmail.com",
+            "homepage": "https://juanjimeneztj.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
